@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: white     ;
+    width: 100%; /* اخذ كامل العرض */
+    position: fixed; /*جعل الهيدر ثابت */
+    z-index: 999;/* لاشي يغطي الهيدر */
+    display: flex;
+    justify-content: space-between; /*مسافة بين الهيدر والعناصر الاخرى الموجودة فيه */
+    align-items: center; /* جعلها في الوسط بشكل عمودي */
+    padding: 10px 200px;/* عشرة من فوق وتحت وميتين من الجنب */
+
+}
+.logo{
+    text-decoration: none; /*ازالة الخط من تحت النص */
+    color: #3a6cf4;/* لون الخط*/
+    text-transform: uppercase; /* جعل الاحرف كبتل */
+    font-weight: 700; /*عرض الخط */
+    font-size: 1.8em; /*حجم الخط */
+}
+.navigation a { /* ضع حرف a لكي يتطبق على الروابط */
+    text-decoration: none; 
+    color: #3a6cf4; 
+    font-size: 1em; 
+    font-weight: 500; 
+    padding-left: 30px;
+}
+.navigation a:hover { /* اذا تم تمرير الماوس فوق الكلمة يتغير اللون */
+    color: cadetblue;
+
+}
+
+section{
+    padding: 100px 200px;
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(imges/ba1.png) no-repeat; /*اضافة خلفية وعدم تكرار  */
+    background-size: cover; /*جعل الصورة كامل الموقع */
+    background-position: center ;
+    background-attachment:fixed ; /* الصورة ثابته */
+
+}
+.main h2 {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500px;
+}
+.main h2 span{
+    display: inline-block; /* لان السبان اللاين نسوي هذا عشان ننزلها تحت */
+    margin-top: 10px;
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main h3 {
+    color: white;
+    font-size: 1em;
+    font-weight: 700px;
+    letter-spacing: 1px; /* المسافة بين الاحرف */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-but{
+    text-decoration: none;
+    color: white;
+    background-color: #3a6cf4;
+    font-size: 1.1em;
+    font-weight: 600px;
+    display: inline-block; /* جعل النص بلوك عشان نتحكم في البادنق */
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px; /* لجعل المربع دائري */
+    margin-bottom: 10px;
+    transition: 0.7s ease; /* الوقت التحرك اذا جبت الموشر على المربع */
+
+}
+.main-but:hover{ /* عند مرور الموشر علية يتغير لونه وشكلة */
+    background-color: #0a49f6;
+    transform: scale(1.1) /* يكبر شكلة بحجم 1.1*/
+}
+.social-icons a{
+    color: #fff;
+    font-size: 1.7em;
+    margin-left: 50px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color:#3a6cf4 ;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* عشان تكون جنب بعض */
+    flex-wrap: wrap; /* لو فيه اكثر من محدة ولا فيه مساحة تنزل تحت*/
+}
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%); /* لضل اللي بخلف المربع*/ 
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    color:#3a6cf4 ;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color:#3a6cf4 ;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+
+
+}
+
+
+.projects .content{
+    margin-top: 30px;
+}
+.project-cards{
+    background-color: #fff;
+    border: 1px solid #fff; /*الحدود */
+    min-height: 14em;
+    width: 20em; /* حجم الصورة*/
+    overflow: hidden; /*لضبط الصورة */
+    border-radius: 10px;
+    margin: 20px;
+    transition: 2.7s ease; /* الطلوع اذا وصلك الماوس*/
+}
+.project-cards:hover{
+    transform: scale(1.1);
+}
+.project-cards:hover .project-image{  /* الصورة تصير شفافة*/
+    opacity: 0.9;
+}
+.project-image img{
+    width: 100%;  /* الصورة تاخذ حجم100 تكون صغيرة*/
+    
+}
+.project-info{
+    padding: 1em;
+}
+.project-web{
+    font-size: 0.8em;
+    color: #000;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: #0a49f6;
+
+}
+.more-details:hover{
+    color: #601cfc;
+}
+
+/*الاتصال*/
+.content .icon{
+    font-size: 4.5em;
+}
+.content .info h3{
+    color: #000;
+}
+
+.content .info p{
+    font-size: 1.5em;
+}
+#info_email{
+    font-size: 1em;
+}
+.footer{
+    background-color:#0E2A47 ;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.footer-title span{
+    color: #0a49f6;
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-content strong {
+    color: #3a6cf4;
+}
+
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .navigation a {
+    color: #eeeef3;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+header .navigation a:hover {
+    color: #00bcd4;
+}
+
+
+.main-but {
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.main-but:hover {
+    background-color: #0097a7;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #00bcd4;
+}
+
+.about, .education, .experience, .skills, .projects, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2, .education h2, .experience h2, .skills h2, .projects h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.about-content, .education-content, .experience-content, .skills-content, .projects-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cards .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.card .icon {
+    font-size: 48px;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .footer-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 10px;
+}
+
+.footer .social-icons a:hover {
+    color: #00bcd4;
+}
+.card .info p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-size: 0.9em;
+
+}
